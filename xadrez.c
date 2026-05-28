@@ -7,28 +7,28 @@
 int main() {
     // Nível Novato - Movimentação das Peças
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-    char B, T, R, C; // peças 
-    int direcao; // ainda não sei se vou usar
+    int pecas, bispo, torre, rainha, cavaloMove1, cavaloMove2; // peças  
+    int casas, direcao;
 
-    B = 0;
-    T = 0;
-    R = 0;
-    C = 0;
+    bispo = 0;
+    torre = 0;
+    rainha = 0;
+    cavaloMove1 = 0;
+    cavaloMove2 = 0;
 
     printf("***Conhecendo peças de Xadrez***\n");
-    printf("Peças\nBispo\nTorre\nRainha\n");
-    //printf("Escolha uma direção\nW. cima\nS. baixo\nA. esquerda\nD. direita");
-
+    printf("Peças\n1. Bispo\n2. Torre\n3. Rainha\n4. Cavalo\n");
+    scanf("%d", &pecas);
     // Implementação de Movimentação do Bispo
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
     // por enquanto vou fazer um movimento e deixar o resto meio pronto em comentarios 
-    while (B <= 5){
+    while (bispo <= 5){
         //switch (direcao) // escolher a direção, talvez ?
         //{
         //case 'W':
         //case 'w':
             printf("bispo anda para diagonal superior direita\n");
-            B++;
+            bispo++;
             //break;
         //case 'S':
         //case 's'; 
@@ -55,12 +55,12 @@ int main() {
         //printf("torre anda para baixo\n");
         printf("torre anda para direita\n");
         //printf("torre anda para esquerda\n");
-        T++;
-    } while (T <= 5);
+        torre++;
+    } while (torre <= 5);
     
     // Implementação de Movimentação da Rainha
     // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-    for (R = 0; R <= 8 ; R ++) {
+    for (rainha = 0; rainha <= 8 ; rainha ++) {
         //printf("Rainha anda para cima\n");
         //printf("Rainha anda para baixo\n");
         printf("Rainha anda para esquerda\n");
@@ -73,11 +73,11 @@ int main() {
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
     // Um loop pode representar a movimentação horizontal e outro vertical.
-    while (C < 1) {
-        for (C = 0; C < 3; C++) {
+    while (cavaloMove1 < 2) {
+        for (cavaloMove2 = 0; cavaloMove2 < 3; cavaloMove1++, cavaloMove2++) {
             printf("Cavalo anda para cima\n");
-        }
-        printf("Cavalo anda para direita\n");
+            }
+        printf("Cavalo anda para direita\n");                
     } 
     // Nível Mestre - Funções Recursivas e Loops Aninhados
     // Sugestão: Substitua as movimentações das peças por funções recursivas.
